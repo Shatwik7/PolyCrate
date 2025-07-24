@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+package proto;
+
+option go_package = "github.com/shatwik7/polycrate/libs/proto;proto";
+
+service AssetService {
+  rpc GetAsset(GetAssetRequest) returns (GetAssetResponse);
+}
+
+message GetAssetRequest {
+  string id = 1;
+}
+
+message GetAssetResponse {
+  string id = 1;
+  string name = 2;
+}

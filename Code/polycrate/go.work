@@ -1,0 +1,8 @@
+go 1.23.5
+
+use (
+	./apps/asset_service
+	./apps/gateway
+	./libs/db
+	./libs/proto
+)
