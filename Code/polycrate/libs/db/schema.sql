@@ -1,3 +1,6 @@
+-- schema of the database
+-- ONLY DDL
+
 CREATE TABLE IF NOT EXISTS assets (
     id SERIAL PRIMARY KEY,
     name TEXT NOT NULL,

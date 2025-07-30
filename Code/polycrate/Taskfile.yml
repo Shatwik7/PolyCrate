@@ -1,0 +1,9 @@
+version: '3'
+
+tasks:
+  dev_infra:
+    cmds:
+      - docker-compose -f ./infra/dev/docker-compose.yml  up -d
+  gen:
+    cmds:
+      - protoc --proto_path=protobuf "protobuf/orders.proto" --go_out=services/common/genproto/orders --go_opt=paths=source_relative --go-grpc_out=services/common/genproto/orders --go-grpc_opt=paths=source_relative
