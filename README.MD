@@ -1,36 +1,39 @@
 # 🧩 Polycrate – 3D Asset Sharing Community Platform
 
-Polycrate is a scalable **microservice-based backend system** built in **Go**, designed to manage and deliver **3D assets** for web-based visualization platforms. It integrates tightly with a **React.js** frontend that renders models using **Three.js**.
+Polycrate is a scalable, microservice-based backend system built in Go, designed to manage, convert, and deliver 3D assets for web-based visualization platforms. It tightly integrates with a React.js frontend using Three.js and GLTFLoader for interactive, compressed 3D previews.
 
 ---
 
 ## 🧱 Features
 
-- 👤 User management with authentication and password hashing
-- 📦 Asset storage metadata, tagging, and likes
-- 🔍 Search (planned via Elasticsearch)
-- 📬 Notification queue (planned)
-- 🧪 Full test coverage with reporting
-- 💬 gRPC microservices with protobuf interfaces
-- 🐳 Docker-based development infrastructure
+- 👤 **User authentication and account management**
+- 📁 **Upload 3D assets:** `.obj`, `.gltf`, `.glb`, or `.flx`
+- 🔄 **Automatic format conversion and preview generation**
+- 📉 **GLB preview optimization and GZIP compression** for fast delivery
+- ☁️ **S3-compatible object storage**
+- 🔍 **Search** (planned: Elasticsearch)
+- 📨 **Notification queue** (planned: NATS or RabbitMQ)
+- 💬 **gRPC microservices** with protobuf interfaces
+- 🐳 **Docker-based development infrastructure**
+- 🧪 **Full test coverage** with reporting
 
 ---
 
 ## 🧰 Tech Stack
 
-| Layer          | Technology                       |
-|----------------|----------------------------------|
-| Backend        | Go (gRPC, PostgreSQL)            |
-| Frontend       | React.js + Three.js              |
-| Database       | PostgreSQL                       |
-| Infrastructure | Docker, Docker Compose           |
-| Search         | Elasticsearch (planned)          |
-| Messaging      | RabbitMQ/NATS (planned)          |
-| Caching        | Redis (planned)                  |
-| Testing        | `go test`, `Testify`             |
+| Layer            | Technology                                      |
+|------------------|-------------------------------------------------|
+| Backend Services | Go (gRPC, PostgreSQL, Redis)                    |
+| Asset Worker     | Go / Node.js / Python (convert & compress)      |
+| Frontend         | React.js + Three.js (`@react-three/fiber`)      |
+| Database         | PostgreSQL                                      |
+| Object Storage   | S3 (AWS or MinIO)                               |
+| Queue            | Redis / NATS / RabbitMQ                         |
+| Infrastructure   | Docker, Docker Compose                          |
+| File Conversion  | Blender CLI, gltf-pipeline, gzip                |
+| Testing          | `go test`, Testify                              |
 
 ---
-
 ## 🚀 Getting Started
 
 ### 1️⃣ Start Local Dev Infrastructure
