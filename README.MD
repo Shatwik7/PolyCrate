@@ -24,13 +24,13 @@ Polycrate is a scalable, microservice-based backend system built in Go, designed
 | Layer            | Technology                                      |
 |------------------|-------------------------------------------------|
 | Backend Services | Go (gRPC, PostgreSQL, Redis)                    |
-| Asset Worker     | Go / Node.js / Python (convert & compress)      |
+| Asset Worker     | Go (convert & compress)                         |
 | Frontend         | React.js + Three.js (`@react-three/fiber`)      |
 | Database         | PostgreSQL                                      |
-| Object Storage   | S3 (AWS or MinIO)                               |
-| Queue            | Redis / NATS / RabbitMQ                         |
+| Object Storage   | S3 (AWS )                                       |
+| Queue            | Redis / AWS SQS                                 |
 | Infrastructure   | Docker, Docker Compose                          |
-| File Conversion  | Blender CLI, gltf-pipeline, gzip                |
+| File Conversion  | Assimp,zip, gzip                                |
 | Testing          | `go test`, Testify                              |
 
 ---
