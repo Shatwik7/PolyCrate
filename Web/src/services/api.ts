@@ -82,6 +82,7 @@ class ApiService {
     // Apply sorting
     if (filters.sort) {
       filteredAssets.sort((a, b) => {
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
         let aValue: any, bValue: any;
         switch (filters.sort) {
           case 'likes':
